@@ -14,10 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout.layout');
 });
 
-Route::get('/nav', function () {
-    sleep(5);
-    return view('navigation');
-});
+Route::get('/htmx/nav', function () {
+    return view('layout.navigation');
+})->name('htmx-nav');

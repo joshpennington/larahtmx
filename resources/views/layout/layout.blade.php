@@ -11,11 +11,22 @@
         @vite('resources/js/app.js')
 
     </head>
-    <body>
-        Hello World!
+    <body class="container mx-auto">
 
-        <div hx-get="/nav" hx-swap="outerHTML" hx-trigger="load">
+    <div class="grid grid-cols-10">
+        <div
+            class="bg-amber-100 col-start-1 col-end-3"
+            hx-get="{{ route('htmx-nav') }}"
+            hx-swap="innerHTML"
+            hx-trigger="load">
             Loading...
         </div>
+
+        <div class="col-auto">
+            Hello World
+        </div>
+
+    </div>
+
     </body>
 </html>
