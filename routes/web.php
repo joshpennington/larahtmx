@@ -14,8 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout.layout');
-});
+    return view('pages.home');
+})->name('page-home');
+
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('page-about');
+
+Route::get('/login', function () {
+    return view('pages.login');
+})->name('page-login');
 
 Route::get('/htmx/nav', function () {
     return view('layout.navigation');

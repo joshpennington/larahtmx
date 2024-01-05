@@ -22,8 +22,8 @@
             Loading...
         </div>
 
-        <div class="col-auto">
-            Hello World
+        <div class="col-auto pl-3">
+            @yield('content')
         </div>
 
     </div>
