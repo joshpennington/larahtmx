@@ -30,6 +30,10 @@ class SidebarNavigation extends Component
                 'url' => route('page-login'),
                 'text' => 'Login'
             ],
+            [
+                'url' => route('page-users'),
+                'text' => 'Users'
+            ],
         ]);
     }
 

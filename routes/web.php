@@ -25,6 +25,25 @@ Route::get('/login', function () {
     return view('pages.login');
 })->name('page-login');
 
+Route::get('/users', function () {
+    return view('pages.users');
+})->name('page-users');
+
+
 Route::get('/htmx/nav', function () {
     return view('layout.navigation');
 })->name('htmx-nav');
+
+Route::get('/htmx/users', function () {
+    return view('users.table')
+        ->with('users', collect([
+            [
+                'username' => 'TheRealBobLeBlah',
+                'email' => 'bob@bobleblah.com'
+            ]
+        ]));
+})->name('htmx-users');
+
+Route::get('/htmx/users-add-row', function () {
+    return view('users.table-add-row');
+})->name('htmx-users-add-row');
